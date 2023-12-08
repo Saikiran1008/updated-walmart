@@ -4,26 +4,20 @@
   <meta charset="UTF-8">
   <title>Accessible Form</title>
   <style>
-    /* Style for the send button */
+    /* Button styling */
     .sendButton {
-      background-color: #007bff; /* Change this to the desired background color */
-      color: #ffffff; /* Change this to the desired text color */
-      padding: 8px 16px; /* Adjust padding as needed */
+      background-color: #0062cc;
+      color: #fff;
+      padding: 8px 16px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-    }
-    
-    /* Adjusted button for improved contrast */
-    .sendButton {
-      background-color: #0062cc; /* Updated background color */
-      color: #fff; /* Updated text color */
     }
   </style>
 </head>
 <body>
 
-<form>
+<form id="myForm" onsubmit="submitForm(event)">
   <!-- Label for the input field -->
   <label for="userInput">Type your message:</label>
   <!-- Input field with associated label and placeholder -->
@@ -31,12 +25,21 @@
   
   <!-- Send button -->
   <button type="submit" class="sendButton">Send</button>
-  
-  <!-- Additional form elements and buttons can follow -->
 </form>
 
 <!-- Labels with meaningful text -->
 <label id="userInputLabel">Type your message:</label>
+
+<script>
+  // JavaScript function to handle form submission
+  function submitForm(event) {
+    event.preventDefault(); // Prevent default form submission
+    // Perform actions here, such as getting input values or submitting data
+    
+    // For now, let's log a message to the console when the form is submitted
+    console.log('Form submitted!');
+  }
+</script>
 
 </body>
 </html>
